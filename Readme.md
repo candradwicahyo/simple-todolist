@@ -1,4 +1,4 @@
-### Simple Todolist
+## Simple Todolist
 
 sebuah program dengan nama simple todolist yang dibuat dengan bahasa pemrograman javascript. program ini disertai dengan fitur ubah dan input pencarian
 
