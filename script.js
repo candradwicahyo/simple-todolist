@@ -72,7 +72,7 @@ window.onload = () => {
     // buat element edit button
     const editButton = create('button', result.editButton);
     editButton.addEventListener('click', () => {
-      editData(paragraph);
+      editData(box, paragraph);
     });
     // tambahkan beberapa attribute baru ke edit button
     editButton.setAttribute('data-bs-toggle', 'modal');
@@ -129,7 +129,7 @@ window.onload = () => {
     });
   }
   
-  function editData(param) {
+  function editData(box, param) {
     const editInput = document.querySelector('.edit-input');
     // masukkan value dari paragraph kedalam input edit
     editInput.value = param.textContent;
@@ -140,6 +140,8 @@ window.onload = () => {
       if (validate(value) == true) {
         // ubah value paragraph dengan value dari input edit
         param.textContent = value;
+        // jalankan lagi fitur pencarian datanya
+        searching(box, param.textContent);
         /* 
           setelah value diganti, ganti isi dari param menjadi 
           null atau string kosong supaya tidak menduplikat
